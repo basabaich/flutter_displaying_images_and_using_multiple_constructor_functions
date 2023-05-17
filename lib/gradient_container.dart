@@ -8,6 +8,9 @@ import 'package:flutter/material.dart';
 //any of it's arguments, so we have commented out importing of this class
 //here.
 
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
+
 class GradientContainer extends StatelessWidget {
   //"const GradientContainer({super.key});"
   //Above constructor of this class is now commented out and below code line
@@ -36,7 +39,7 @@ class GradientContainer extends StatelessWidget {
   //
   //
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -64,12 +67,15 @@ class GradientContainer extends StatelessWidget {
           // ],"
           //
           //
+          begin: startAlignment, end: endAlignment,
         ), //LinearGradient
       ), //BoxDecoration
-      child: Image.asset(
-        'assets/images/dice-1.png',
-        width: 160,
-      ),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice-1.png',
+          width: 160,
+        ), //image.asset
+      ), //Center
       //const StyledText('Hello World!'),
       //Whatever code we will put in the "StyledText" class / function,
       //will be treated as an "argument" for "StyledText" class. How this is
