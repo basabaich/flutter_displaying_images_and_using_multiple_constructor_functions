@@ -73,7 +73,7 @@ class GradientContainer extends StatelessWidget {
       child: Center(
         child: Image.asset(
           'assets/images/dice-1.png',
-          width: 160,
+          width: 90,
         ), //image.asset
       ), //Center
       //const StyledText('Hello World!'),
