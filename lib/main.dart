@@ -17,15 +17,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: GradientContainer(
-          //Here in the below code lines we are using list argument "colors"
-          //and defining all colors from "main.dart" file or "MyApp()" class
-          //and not directly in "GradientContainer()" class. Actually this can
-          //now be done from any class.
-          //
-          Color.fromARGB(255, 160, 90, 70),
-          Color.fromARGB(255, 180, 175, 65),
-        ), //GradientContainer
+        body: GradientContainer.purple(
+            //Here in the below code lines we are using list argument "colors"
+            //and defining all colors from "main.dart" file or "MyApp()" class
+            //and not directly in "GradientContainer()" class. Actually this can
+            //now be done from any class.
+            //
+            //The below lines with hardcoded colors are removed with the above
+            //2nd class constructor which was defined in "GradientContainer()"
+            //class & we call that 2nd constructor here at teh top i.e.
+            //"GradientContainer.purple()"
+            //
+            //Color.fromARGB(255, 160, 90, 70),
+            //Color.fromARGB(255, 180, 175, 65),
+            //
+            //Eventually we get a background of this color behind our image.
+            //
+            //
+            ), //GradientContainer.purple
       ), //Scaffold
     ); //MaterialApp
   }

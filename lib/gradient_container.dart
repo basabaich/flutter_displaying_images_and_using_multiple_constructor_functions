@@ -3,7 +3,10 @@
 //
 
 import 'package:flutter/material.dart';
-import '../styled_text.dart';
+//import '../styled_text.dart';
+//As we are not calling the "StyledText()" class any more and are not calling
+//any of it's arguments, so we have commented out importing of this class
+//here.
 
 class GradientContainer extends StatelessWidget {
   //"const GradientContainer({super.key});"
@@ -13,6 +16,15 @@ class GradientContainer extends StatelessWidget {
   //modified lines below is the new changed constructor code line:
   //
   const GradientContainer(this.color1, this.color2, {super.key});
+  //The above code is the 1st constructor of this class. But there can
+  //be a second constructor function also as well.
+  //
+  //
+  const GradientContainer.purple({super.key})
+      : color1 = Colors.deepPurple,
+        color2 = Colors.indigo;
+  //And this is the second constructor function of this class i.e.
+  //"GradientContainer()" class.
 //
 //
   final Color color1;
@@ -54,7 +66,11 @@ class GradientContainer extends StatelessWidget {
           //
         ), //LinearGradient
       ), //BoxDecoration
-      child: const StyledText('Hello World!'),
+      child: Image.asset(
+        'assets/images/dice-1.png',
+        width: 160,
+      ),
+      //const StyledText('Hello World!'),
       //Whatever code we will put in the "StyledText" class / function,
       //will be treated as an "argument" for "StyledText" class. How this is
       //done ? to know this you need to see the "StyledText" class in that
